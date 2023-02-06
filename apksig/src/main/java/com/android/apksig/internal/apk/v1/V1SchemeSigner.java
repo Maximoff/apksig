@@ -150,7 +150,8 @@ public abstract class V1SchemeSigner {
         // name must not be longer than 8 characters and may contain only A-Z, 0-9, _, and -.
         StringBuilder result = new StringBuilder();
         char[] nameCharsUpperCase = name.toUpperCase(Locale.US).toCharArray();
-        for (int i = 0; i < Math.min(nameCharsUpperCase.length, 8); i++) {
+//        for (int i = 0; i < Math.min(nameCharsUpperCase.length, 8); i++) {
+		for (int i = 0; i < nameCharsUpperCase.length; i++) {
             char c = nameCharsUpperCase[i];
             if (((c >= 'A') && (c <= 'Z'))
                     || ((c >= '0') && (c <= '9'))
